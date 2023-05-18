@@ -1,0 +1,348 @@
+*{margin : 0 ; padding: 0;}
+
+@keyframes anim1{
+    0%{
+        transform: scale(-0);
+    }
+    50%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes anim2{
+    0%{
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+@keyframes anim3 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes anim4{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+:root{--clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);}
+
+html{scroll-behavior: smooth;
+    overflow-x: hidden;}
+
+body{ font-family: 'Roboto Mono', monospace; 
+    background-color: black; 
+    color: rgb(145, 255, 0)}
+
+
+header{display: flex; }
+header div{margin: 0; padding: 0;}
+
+.fotosbillie{width: 33.3%;
+    border-radius: 10px; 
+    margin: 20px;
+    transition: all 3s;
+    animation-name: anim1; 
+    animation-duration: 3s;
+    animation-delay:0s
+}
+img{ width: 100%}
+
+.fotosbillie img:hover{
+    border-radius: 50%;
+}
+.fotosbillie:hover{
+    transform: rotate(1turn);
+
+}
+
+.nombre{width: 33.3%; 
+    margin-left: 20px;
+    margin-top: 145px;
+
+    animation-name: anim1; 
+    animation-duration: 3s;
+    animation-delay:0s;
+
+}
+.nombre a{
+    text-decoration: none;
+    color: rgb(145, 255, 0);
+    justify-content: center;
+    }
+.nombre h1{
+    transition: all 0.5s ease;
+
+}
+.nombre h1:hover{
+    opacity: 0.5;   
+    transform: scale(1.5) ;
+    transform-origin: top left;
+   
+}
+
+.redes {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation-name: anim1; 
+    animation-duration: 3s;
+    animation-delay:0s;
+}
+.redes img{
+    transition: all 0.5s ease;
+    width: 120%;
+}
+.redes img:hover{opacity: 0.5;
+    transform: scale(2) ;
+    transform-origin: top center;
+}
+
+.secciones a {text-decoration: none;
+     color: black; 
+     margin: 0;}
+.secciones a::after{ content: "";
+     display: block; 
+    background:rgb(64, 113, 0);
+    width: 100%; 
+    height: 2px;
+    clip-path: var(--clippy);
+    transition: all .3s; }
+.secciones a:hover { --clippy: polygon(0 0, 100% 0, 100% 99%, 0 100%);}
+
+.secciones{ background-color: rgb(145, 255, 0) ; 
+    color: black;
+    display: flex; 
+    height: 80px; 
+    justify-content: space-evenly;
+    align-items: center;
+    animation-name: anim3; 
+    animation-duration: 3s;
+    animation-delay:0s }
+
+
+.logros{display: flex; 
+    width: 100%; 
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 30px;
+
+    animation-name: anim2; 
+    animation-duration: 3s;
+    animation-delay:0s
+}
+.sobre{width: 33.3%}
+.grandes{width: 33.3%; 
+    margin-top: 120px;
+    margin-bottom: 20px;}
+.reconocimientos{width: 33.3%;
+     margin-top: 250px;}
+.grandes a{text-decoration: none; 
+    color: rgb(145, 255, 0)}
+.grandes a:hover {color :rgb(64, 113, 0)}
+.reconocimientos a{text-decoration: none; 
+    color: rgb(145, 255, 0)}
+.reconocimientos a:hover {color :rgb(64, 113, 0)}
+
+
+.habilidades{
+    justify-content: space-between; 
+    display: flex; 
+    margin:10px;
+    box-sizing: border-box;    
+}
+
+.personal h1{text-align: center;}
+.personal li{padding-top: 15px;}
+.personal{border: solid 1.5px; 
+    border-radius: 10px; 
+    border-color:  rgb(145, 255, 0); 
+    align-items: center; 
+    box-sizing: border-box;
+    padding: 20px;
+    width: 30%;}
+.social h1{text-align: center;}
+.social li{padding-top: 100px;}
+.social{border: solid 1.5px;
+     border-radius: 10px;
+      border-color:  rgb(145, 255, 0); 
+      align-items: center; 
+      box-sizing: border-box;
+      padding: 20px;
+      width: 30%;}
+.musical h1{text-align: center;}
+.musical li{padding-top: 15px;}
+.musical{border: solid 1.5px; 
+    border-radius: 10px; 
+    border-color:  rgb(145, 255, 0) ;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 20px;
+      width: 30%;}
+
+.formacion{border: solid 1.5px;
+    border-radius: 10px; 
+    border-color:  rgb(145, 255, 0) ; 
+    align-items: center; 
+    padding: 10px;
+    margin: 30px;
+    
+    }
+.formacion div{  width: 80%;
+}
+.formacion h2{
+    margin-bottom: 5px;}
+
+.experiencia{
+    justify-content: center;
+    margin: 10px; 
+    align-items: center;
+    align-content: center;
+    margin-left: 350px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.experiencia h2{
+        margin-bottom: 15px;
+}
+
+footer{display: flex;
+    justify-content: center}
+.foot-body{display: flex;}
+
+
+.contactar{height: 100px;
+    display: flex;
+    margin-top: 35px;
+    height: 50px;
+    margin-top: 35px;
+}
+.contactar a:hover{
+    opacity: 0.5
+}
+.contactar img{
+    transition: all 0.5s ease;
+}
+.contactar img:hover{opacity: 0.5;
+    transform: scale(2) ;
+    transform-origin: top center;
+}
+
+.titulofoot a {text-decoration: none;
+    color: black; 
+    margin: 0;}
+.titulofoot a::after{ content: "";
+    display: block; 
+   background:rgb(64, 113, 0);
+   width: 100%; 
+   height: 2px;
+   clip-path: var(--clippy);
+   transition: all .3s; }
+.titulofoot a:hover { --clippy: polygon(0 0, 100% 0, 100% 99%, 0 100%);}
+footer{background-color: rgb(145, 255, 0) ; 
+    color: black;
+    display: flex; 
+    height: 100px; 
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+
+
+@media screen and (min-width:0px) and (max-width: 600px) {  
+    *{margin: 0; padding: 0;}
+
+    .fotosbillie{width: 200px;
+        margin: 10px}
+
+    .nombre{font-size: 8px;  
+        margin-top: 50px; }
+
+    .redes{width: 25%; 
+        flex-direction: column; 
+        margin: 10px;
+        align-items: flex-end;}
+   
+    .secciones{ font-size: 10px;  
+    height: 40px; }
+
+    .logros{
+        font-size: 11px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+
+    }
+    .logros h1{text-align: center; 
+        margin-bottom: 5px;}
+    .sobre{ width: 50%;
+        text-align: center;}
+    .grandes{ width: 48%; 
+       align-items: flex-end;
+       text-align: center;
+       }
+    .sobre , .grandes {justify-content: center;}    
+    .reconocimientos{width: 98%;
+        margin-top: 10px;
+        margin-left: 10px;
+        }
+    .reconocimientos li{padding-top: 15px;}
+
+    .habilidades{
+        justify-content: center;
+        font-size: 11px;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+    .personal {
+        margin: 10px;
+        width:90%     
+    }
+    .social {
+        margin: 10px;
+        width: 40%
+    }
+    .social li{
+        padding-top: 15px;}
+    .musical{ 
+        margin: 10px;
+        width: 40%
+    }
+
+    .formacion{
+        font-size: 11px;}
+    .formacion h2{
+            margin-bottom: 5px;}
+
+    .experiencia{
+        box-sizing: border-box;
+        font-size: 11px;
+        width: 98%;
+        margin: 10px;
+        padding:10px;
+    }
+
+ 
+    footer{font-size: 11px;  
+        height: 90px; }
+
+}
